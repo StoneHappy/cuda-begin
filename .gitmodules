@@ -1,3 +1,6 @@
 [submodule "src/Vendors/googletest"]
 	path = src/Vendors/googletest
 	url = https://github.com/google/googletest.git
+[submodule "src/Vendors/cuda-samples"]
+	path = src/Vendors/cuda-samples
+	url = https://github.com/NVIDIA/cuda-samples.git

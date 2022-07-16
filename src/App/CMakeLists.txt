@@ -8,11 +8,12 @@ set(CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_CURRENT_SOURCE_DIR}/source)
 
 file(GLOB CPP_HEAD_FILES CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/include/*.h)
 file(GLOB CPP_SOUCE_FILES CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/source/*.cpp)
+file(GLOB CU_SOUCE_FILES CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/source/*.cu)
 # file(GLOB EDITOR_RESOURCE CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/resource/PilotEditor.rc)
 
-source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}" FILES ${CPP_HEAD_FILES} ${CPP_SOUCE_FILES})
+source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}" FILES ${CPP_HEAD_FILES} ${CPP_SOUCE_FILES} ${CU_SOUCE_FILES})
 
-add_executable(${TARGET_NAME} ${CPP_HEAD_FILES} ${CPP_SOUCE_FILES})
+add_executable(${TARGET_NAME} ${CPP_HEAD_FILES} ${CPP_SOUCE_FILES} ${CU_SOUCE_FILES})
 
 # add_compile_definitions("PILOT_ROOT_DIR=${BINARY_ROOT_DIR}")
 
@@ -21,7 +22,10 @@ set_target_properties(${TARGET_NAME} PROPERTIES FOLDER ${PROJECT_NAME})
 
 target_compile_options(${TARGET_NAME} PUBLIC "$<$<COMPILE_LANG_AND_ID:CXX,MSVC>:/WX->")
 
-target_link_libraries(${TARGET_NAME} ${PROJECT_NAME}Runtime)
+target_link_libraries(${TARGET_NAME} 
+                        ${PROJECT_NAME}Runtime
+                        cuda_common
+)
 
 target_include_directories(
   ${TARGET_NAME} 
