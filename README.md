@@ -1,5 +1,6 @@
-# my_cpp_empty_project
+# CUDA begin
 
+CUDA begin with morden CMake
 
 ## how to use it
 ```bash
