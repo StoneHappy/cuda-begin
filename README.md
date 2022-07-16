@@ -5,7 +5,7 @@
 ```bash
 # clone repository and submodule
 
-git clone --recursive https://github.com/StoneHappy/my_cpp_empty_project.git
+git clone --recursive https://github.com/StoneHappy/cuda-begin.git
 
 # create buid dir
 
