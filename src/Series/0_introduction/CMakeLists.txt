@@ -1,1 +1,1 @@
-add_subdirectory(0_asyncAPI)
+add_subdirectory(0_hello_world)

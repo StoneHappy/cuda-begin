@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.19 FATAL_ERROR)
 
-project(cuda-begin VERSION 0.1.0)
+project(cuda-begin VERSION 0.1.0 LANGUAGES CXX CUDA)
 
 
 option(ENABLE_TEST "Enable google test" ON)
@@ -13,8 +13,6 @@ option(ENABLE_TEST "Enable google test" ON)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-enable_language("CUDA")
 
 include(cmake/tools.cmake)
 

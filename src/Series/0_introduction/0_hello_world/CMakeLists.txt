@@ -1,4 +1,4 @@
-set(TARGET_NAME 0_introduction-0_asyncAPI)
+set(TARGET_NAME 0_introduction-0_hello_world)
 # just for qt
 # set(CMAKE_AUTOUIC ON)
 # set(CMAKE_AUTOMOC ON)
