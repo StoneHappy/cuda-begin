@@ -13,7 +13,8 @@ option(ENABLE_TEST "Enable google test" ON)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
+# my device:gtx 1650S, CUDA ARCH = 750. set most suitable CUDA ARCH for your device
+set(CMAKE_CUDA_ARCHITECTURES 75)
 include(cmake/tools.cmake)
 
 # ---- Include guards ----
