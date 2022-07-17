@@ -1,8 +1,11 @@
 # CUDA begin
 
 CUDA begin with morden CMake
+## how to build
+### install cuda
+#### windows
 
-## how to use it
+
 ```bash
 # clone repository and submodule
 

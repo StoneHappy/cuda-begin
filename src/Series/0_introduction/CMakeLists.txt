@@ -1,1 +1,2 @@
 add_subdirectory(0_hello_world)
+add_subdirectory(1_global_device)
