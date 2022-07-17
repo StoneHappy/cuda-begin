@@ -3,13 +3,13 @@
 #include <cuda.h>
 #include <cuda_runtime.h>
 
-__global__ void test(){
+__global__ void kernel(){
     printf("Hi Cuda World");
 }
 
 int main( int argc, char** argv )
 {
-    test<<<1,1>>>();
+    kernel<<<1,1>>>();
     cudaDeviceSynchronize();
     return 0;
 }

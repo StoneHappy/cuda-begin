@@ -8,13 +8,13 @@ __device__ void say_hello()
     printf("hello!\n");
 }
 
-__global__ void test() {
+__global__ void kernel() {
     say_hello();
 }
 
 int main( int argc, char** argv )
 {
-    test<<<1,1>>>();
+    kernel<<<1,1>>>();
     cudaDeviceSynchronize();
     return 0;
 }

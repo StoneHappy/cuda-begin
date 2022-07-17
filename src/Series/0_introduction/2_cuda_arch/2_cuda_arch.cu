@@ -10,13 +10,13 @@ __device__ void show_cuda_arch()
 #endif
 }
 
-__global__ void test() {
+__global__ void kernel() {
     show_cuda_arch();
 }
 
 int main( int argc, char** argv )
 {
-    test<<<1,1>>>();
+    kernel<<<1,1>>>();
     cudaDeviceSynchronize();
     return 0;
 }
