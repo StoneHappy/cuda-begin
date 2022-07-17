@@ -1,12 +1,15 @@
-#include <cstdio>
+#include <stdio.h>
+#include <assert.h>
+#include <cuda.h>
+#include <cuda_runtime.h>
 
-__global__ void kernel()
-{
-	printf("Hello, world!\n");
+__global__ void test(){
+    printf("Hi Cuda World");
 }
 
-int main()
+int main( int argc, char** argv )
 {
-	kernel <<<1, 1 >>>();
-	return 0;
+    test<<<1,1>>>();
+    cudaDeviceSynchronize();
+    return 0;
 }
