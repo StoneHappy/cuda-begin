@@ -1,4 +1,4 @@
-set(TARGET_NAME 0_introduction-1_global_device)
+set(TARGET_NAME 1_global_device)
 # just for qt
 # set(CMAKE_AUTOUIC ON)
 # set(CMAKE_AUTOMOC ON)
@@ -18,7 +18,7 @@ add_executable(${TARGET_NAME} ${CPP_HEAD_FILES} ${CPP_SOUCE_FILES} ${CU_SOUCE_FI
 # add_compile_definitions("PILOT_ROOT_DIR=${BINARY_ROOT_DIR}")
 
 set_target_properties(${TARGET_NAME} PROPERTIES CXX_STANDARD 17 OUTPUT_NAME ${TARGET_NAME})
-set_target_properties(${TARGET_NAME} PROPERTIES FOLDER Series/0_introduction/1_global_device)
+set_target_properties(${TARGET_NAME} PROPERTIES FOLDER Series/0_introduction)
 
 target_compile_options(${TARGET_NAME} PUBLIC "$<$<COMPILE_LANG_AND_ID:CXX,MSVC>:/WX->")
 
