@@ -3,8 +3,9 @@
 CUDA begin with morden CMake
 ## how to build
 ### install cuda
-#### windows
+[download](https://developer.nvidia.com/cuda-downloads)
 
+set bin dir to env path
 
 ```bash
 # clone repository and submodule
